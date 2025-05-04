@@ -1,5 +1,4 @@
 # ZeroCat 编程社区
-[中文](./README_ZH.md) | [English](./README.md)
 
 高中喵开发，求 Star 支持
 
@@ -45,7 +44,7 @@ QQ：964979747
 想了解社区效果，请参考 [ZeroCat](https://zerocat.houlangs.com)。
 
 ## 安装
-![使用Nodejs开发](public/Node.js.png)
+
 
 这个项目使用 [node](http://nodejs.org) , [npm](https://npmjs.com), [docker](https://docker.com)，请确保你本地已经安装了祂们
 
@@ -100,7 +99,6 @@ ZeroCat 的项目 遵循 [Contributor Covenant](http://contributor-covenant.org/
 感谢所有参与项目的人，他们的信息可以在右侧看到，这是实时的且便于查看
 ## 许可协议
 
-ZeroCat 社区项目遵循 [GPL-3.0 许可证](LICENSE)。
 
 
 版权所有 (C) 2020-2024 孙悟元。
