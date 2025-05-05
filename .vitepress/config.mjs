@@ -29,7 +29,6 @@ export default defineConfig({
       { icon: 'mail', link: 'mailto:sun@wuyuan.dev' }
     ],
 
-    ignoreDeadLinks: true,
     search: {
       provider: 'local'
     },
@@ -39,5 +38,7 @@ export default defineConfig({
     },
     lastUpdated: true
 
-  }
+  },
+  ignoreDeadLinks: true,
+
 })
