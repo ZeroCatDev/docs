@@ -32,8 +32,8 @@ description: 常见部署问题的故障排查指南
 
    ```bash
    rm -rf node_modules
-   npm cache clean --force
-   npm install
+   pnpm cache clean --force
+   pnpm install
    ```
 
 3. **端口已被占用**
@@ -100,37 +100,6 @@ description: 常见部署问题的故障排查指南
    sudo ufw allow mysql
    ```
 
-## 前端加载问题
-
-### 症状
-网站加载，但JavaScript不工作或样式缺失。
-
-### 可能的原因和解决方案
-
-1. **构建失败**
-
-   重新构建前端资源：
-
-   ```bash
-   npm run build
-   ```
-
-2. **缓存问题**
-
-   清除浏览器缓存，或添加版本号到静态资源。
-
-3. **路径配置错误**
-
-   检查Nginx配置中的路径设置：
-
-   ```bash
-   sudo nano /etc/nginx/sites-available/zerocat
-
-   # 确保静态文件路径正确
-   location /static/ {
-       root /path/to/ZeroCat/public;
-   }
-   ```
 
 ## 性能问题
 
@@ -268,10 +237,9 @@ grep -i error logs/app.log
 journalctl -u zerocat.service -f
 ```
 
-## 获取支持
+## 获取帮助
 
-如果以上方法无法解决问题，请通过以下渠道获取支持：
+如果仍无法解决，可以通过以下渠道获取支持：
 
-1. GitHub Issues: https://github.com/ZeroCatDev/ZeroCat/issues
-2. 社区QQ群: 964979747
-3. 邮箱: support@example.com
+- GitHub Issues: [https://github.com/ZeroCatDev/ZeroCat/issues](https://github.com/ZeroCatDev/ZeroCat/issues)
+- QQ群: 964979747

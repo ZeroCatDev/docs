@@ -3,23 +3,30 @@
 layout: home
 
 hero:
-  name: "ZeroCat社区"
-  text: "文档"
+  name: "ZeroCat"
+  text: "社区文档"
   tagline: 新一代，开源，编程社区
   actions:
     - theme: brand
       text: 开始
-      link: /deployment/config-reference
+      link: /deployment
     - theme: alt
-      text: 配置参考
-      link: /deployment/config-reference
+      text: 访问社区
+      link: https://zerocat.houlangs.com
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: ZeroCat社区
+    details: 新一代，开源，编程社区
+    link: https://zerocat.houlangs.com
+    icon: 🌟
+
+  - title: Classworks作业板
+    details: 适用于班级大屏的作业板小工具
+    link: https://cs.houlangs.com
+    icon: 📚
+  - title: 部署文档
+    details: 部署文档
+    link: /deployment
+    icon: 📚
 ---
 
