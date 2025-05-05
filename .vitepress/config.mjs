@@ -4,6 +4,8 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "ZeroCat社区",
   description: "社区文档",
+  lang: 'zh-CN',
+  lastUpdated: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -36,7 +38,6 @@ export default defineConfig({
       pattern: 'https://github.com/zerocatdev/docs/edit/main/:path',
       text: '在 GitHub 上编辑此页面'
     },
-    lastUpdated: true
 
   },
   ignoreDeadLinks: true,
