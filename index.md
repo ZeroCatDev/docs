@@ -9,24 +9,29 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: /deployment
+      link: /zerocat
     - theme: alt
-      text: 访问社区
-      link: https://zerocat.houlangs.com
+      text: ZeroCat
+      link: /zerocat
+    - theme: alt
+      text: Classworks
+      link: /classworks
 
 features:
   - title: ZeroCat社区
     details: 新一代，开源，编程社区
     link: https://zerocat.houlangs.com
     icon: 🌟
-
+    linkText: 立即体验
   - title: Classworks作业板
     details: 适用于班级大屏的作业板小工具
     link: https://cs.houlangs.com
     icon: 📚
-  - title: 部署文档
-    details: 部署文档
-    link: /deployment
-    icon: 📚
+    linkText: 立即体验
+  - title: 厚浪云
+    details: 助力你所爱的✨
+    link: https://hlyun.org/
+    icon: ☁️
+    linkText: 立即访问
 ---
 

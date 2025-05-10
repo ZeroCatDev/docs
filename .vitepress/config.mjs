@@ -9,22 +9,38 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
+      { text: '主页', link: '/' },
+      { text: 'ZeroCat社区', link: '/zerocat/' },
+      { text: 'Classworks作业板', link: '/classworks/' },
     ],
+    sidebar: {
+      // 当用户位于 `guide` 目录时，会显示此侧边栏
+      '/zerocat/': [
+        {
+          text: 'ZeroCat社区',
+          items: [
+            { text: '简介', link: '/zerocat/' },
+            { text: '开始使用', link: '/zerocat/getting-started' },
 
-    sidebar: [
+            { text: '部署概览', link: '/zerocat/deployment/' },
+            { text: '前端构建', link: '/zerocat/frontend-building' },
+            { text: '配置参考', link: '/zerocat/config-reference' },
+            { text: '故障排查', link: '/zerocat/troubleshooting' }
+          ]
+        }
+      ],
 
-      {
-        text: '部署指南',
-        items: [
-          { text: '部署概览', link: '/deployment/' },
-          { text: '开始使用', link: '/deployment/getting-started' },
-          { text: '前端构建', link: '/deployment/frontend-building' },
-          { text: '配置参考', link: '/deployment/config-reference' },
-          { text: '故障排查', link: '/deployment/troubleshooting' }
-        ]
-      }
-    ],
+      // 当用户位于 `config` 目录时，会显示此侧边栏
+      '/classworks/': [
+        {
+          text: 'Classworks',
+          items: [
+            { text: '简介', link: '/classworks/' },
+            { text: 'KV数据库', link: '/classworks/kv' }
+                    ]
+        }
+      ]
+    },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/sunwuyuan' },
