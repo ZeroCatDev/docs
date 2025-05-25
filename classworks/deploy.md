@@ -1,29 +1,29 @@
 ---
 title: 部署 Classworks KV
 ---
+
 # 部署 Classworks KV
+
 ## 快速开始
 
 [![通过雨云一键部署](https://rainyun-apps.cn-nb1.rains3.com/materials/deploy-on-rainyun-cn.svg)](https://app.rainyun.com/apps/rca/store/6229/wuyuan_)
 
 如果你想快速体验 Classworks，我们推荐使用 SQLite 版本。可以零配置运行。
-
+理论上系统会自动处理数据库结构问题，但我们还是建议你先学习 [Prisma](https://www.prisma.io/) 的使用。
 ## 部署方案
 
 ### MySQL 版本
 
 ```yaml
-version: '3.8'
+version: "3.8"
 
 services:
   app:
-    build:
-      context: .
-      args:
-        DATABASE_TYPE: mysql
+    image: ghcr.io/zerocatdev/classworks:latest
     environment:
       - NODE_ENV=production
-      - MYSQL_DATABASE_URL=mysql://user:password@mysql:3306/classworks
+      - DATABASE_TYPE=mysql
+      - DATABASE_URL=mysql://user:password@mysql:3306/classworks
     ports:
       - 3000:3000
     depends_on:
@@ -50,25 +50,23 @@ volumes:
 ```
 
 默认配置：
+
 - 数据库版本：MySQL 8
 - 默认端口：3306
 - 数据持久化：自动配置
 
 ### PostgreSQL 版本
 
-
 ```yaml
-version: '3.8'
+version: "3.8"
 
 services:
   app:
-    build:
-      context: .
-      args:
-        DATABASE_TYPE: postgres
+    image: ghcr.io/zerocatdev/classworks:latest
     environment:
       - NODE_ENV=production
-      - PG_DATABASE_URL=postgresql://user:password@postgres:5432/classworks
+      - DATABASE_TYPE=postgres
+      - DATABASE_URL=postgresql://user:password@postgres:5432/classworks
     ports:
       - 3000:3000
     depends_on:
@@ -94,6 +92,7 @@ volumes:
 ```
 
 默认配置：
+
 - 数据库版本：PostgreSQL 15 Alpine
 - 默认端口：5432
 - 数据持久化：自动配置
@@ -103,17 +102,16 @@ volumes:
 将以下内容保存为 `docker-compose.yml`：
 
 ```yaml
-version: '3.8'
+version: "3.8"
 
 services:
   app:
-    build:
-      context: .
-      args:
-        DATABASE_TYPE: sqlite
+    image: ghcr.io/zerocatdev/classworks:latest
     ports:
       - 3000:3000
     environment:
+      - NODE_ENV=production
+      - DATABASE_TYPE=sqlite
       - NODE_ENV=production
     volumes:
       - sqlite_data:/data
@@ -128,9 +126,13 @@ volumes:
 2. 根据需要修改环境变量（见下方环境变量配置）
 3. 运行 `docker compose up -d` 启动服务
 
-
 ## 环境变量配置
+
 ```
+DATABASE_TYPE= # 数据库类型 必填 必须是 sqlite postgres mysql
+DATABASE_URL= # 数据库连接字符串 除sqlite外必填
+
+
 # Axiom.co 遥测配置 可选
 AXIOM_DATASET=
 AXIOM_TOKEN=
