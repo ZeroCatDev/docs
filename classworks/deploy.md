@@ -10,6 +10,7 @@ title: 部署 Classworks KV
 
 如果你想快速体验 Classworks，我们推荐使用 SQLite 版本。可以零配置运行。
 理论上系统会自动处理数据库结构问题，但我们还是建议你先学习 [Prisma](https://www.prisma.io/) 的使用。
+
 ## 部署方案
 
 ### MySQL 版本
