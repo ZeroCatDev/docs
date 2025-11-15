@@ -37,6 +37,7 @@ export default defineConfig({
           items: [
             { text: '简介', link: '/classworks/' },
             { text: '快速开始', link: '/classworks/development' },
+            { text: '数据格式', link: '/classworks/format' },
           ]
         }
       ]
