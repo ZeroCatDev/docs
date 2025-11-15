@@ -36,8 +36,7 @@ export default defineConfig({
           text: 'Classworks',
           items: [
             { text: '简介', link: '/classworks/' },
-            { text: 'KV数据库', link: '/classworks/kv' },
-            { text: '部署', link: '/classworks/deploy' }
+            { text: '快速开始', link: '/classworks/development' },
           ]
         }
       ]

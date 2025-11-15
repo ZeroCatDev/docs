@@ -9,13 +9,14 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: /zerocat
-    - theme: alt
-      text: ZeroCat
-      link: /zerocat
-    - theme: alt
-      text: Classworks
       link: /classworks
+    - theme: alt
+      text: Classworks 文档
+      link: /classworks
+    - theme: alt
+      text: ZeroCat 部署文档
+      link: /zerocat
+
 
 features:
   - title: ZeroCat社区
