@@ -26,12 +26,12 @@ features:
     linkText: 立即体验
   - title: Classworks作业板
     details: 适用于班级大屏的作业板小工具
-    link: https://cs.houlangs.com
+    link: https://cs.houlang.cloud
     icon: 📚
     linkText: 立即体验
   - title: 厚浪云
     details: 助力你所爱的✨
-    link: https://hlyun.org/
+    link: https://houlang.cloud/
     icon: ☁️
     linkText: 立即访问
 ---
